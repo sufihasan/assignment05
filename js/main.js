@@ -12,9 +12,14 @@ else {
 document.getElementById('task-assigned').innerText = totalTaskButton;
 
 let compliteTask = parseInt(document.getElementById('complite-task').innerText);
-console.log(compliteTask);
+
 
 const activityContainer = document.getElementById('activity-container');
+
+
+document.getElementById('discover-new').addEventListener('click', function () {
+    window.location.href = '../blog.html';
+})
 
 
 
@@ -44,7 +49,7 @@ for (const cardButton of cardButtons) {
         let times = new Date();
         let resultTime = times.toLocaleTimeString();
 
-        p.innerText = `You have complite the task ${cardTaskTitle} ${resultTime}`;
+        p.innerText = `You have complite the task ${cardTaskTitle} at ${resultTime}`;
         p.classList.add('p-3', 'bg-[#f4f7ff]', 'rounded-lg', 'mb-4');
         activityContainer.appendChild(p);
 
