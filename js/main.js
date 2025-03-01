@@ -21,11 +21,19 @@ const activityContainer = document.getElementById('activity-container');
 for (const cardButton of cardButtons) {
     cardButton.addEventListener('click', function (event) {
         event.target.setAttribute('disabled', 'true');
-        totalTaskButton = totalTaskButton - 1;
-        if (totalTaskButton < 10) {
-            totalTaskButton = '0' + totalTaskButton
+
+        let numberTotalTaskButton = parseInt(totalTaskButton);
+        numberTotalTaskButton = numberTotalTaskButton - 1;
+
+        if (numberTotalTaskButton < 10) {
+            totalTaskButton = '0' + numberTotalTaskButton;
+            document.getElementById('task-assigned').innerText = totalTaskButton;
         }
-        document.getElementById('task-assigned').innerText = totalTaskButton;
+        else {
+            document.getElementById('task-assigned').innerText = numberTotalTaskButton;
+        }
+
+
 
         compliteTask++;
         document.getElementById('complite-task').innerText = compliteTask;
@@ -40,7 +48,11 @@ for (const cardButton of cardButtons) {
         p.classList.add('p-3', 'bg-[#f4f7ff]', 'rounded-lg', 'mb-4');
         activityContainer.appendChild(p);
 
+
         alert('Board updated successfully');
+        if (numberTotalTaskButton === 0) {
+            alert('Congrats!!! You have complited all the current task');
+        }
 
     })
 }
