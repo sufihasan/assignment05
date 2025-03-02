@@ -18,7 +18,7 @@ const activityContainer = document.getElementById('activity-container');
 
 
 document.getElementById('discover-new').addEventListener('click', function () {
-    window.location.href = '../blog.html';
+    window.location.href = 'blog.html';
 })
 
 
