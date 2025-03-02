@@ -1,5 +1,5 @@
 const cardButtons = document.querySelectorAll('.card-btn');
-// console.log(cardButtons);
+
 let totalTaskButton;
 if (cardButtons.length < 10) {
     totalTaskButton = '0' + cardButtons.length;

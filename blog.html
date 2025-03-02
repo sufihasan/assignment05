@@ -14,21 +14,70 @@
         <nav class="bg-white p-3 rounded-lg">
             <div class="flex justify-between">
                 <div class="flex items-center gap-3">
-                    <img src="assets/logo.png" alt="">
+                    <img class="w-10 h-10" src="assets/logo.png" alt="">
                     <h2 class="text-3xl font-semibold">DevBoard</h2>
                 </div>
-                <div class="flex gap-4">
-                    <div class="flex gap-3 border items-center px-4 bg-[#f4f7ff] rounded-full">
-                        <img src="assets/checkbox.png" alt="">
-                        <p id="complite-task" class="">24</p>
-                    </div>
-                    <div>
-                        <button id="random-btn"><img src="assets/themebtn.png" alt=""></button>
-                    </div>
+                <div>
+                    <button id="btn-back-todask" class="btn btn-primary">Back to Desk</button>
                 </div>
             </div>
         </nav>
     </header>
+
+    <main class="container mx-auto mt-5">
+        <section>
+            <h1 class="text-center text-2xl font-bold mb-3">Blogs</h1>
+            <div class="mb-6">
+                <div class="bg-white  rounded-lg mb-3">
+                    <h4 class="p-3 font-bold">Question-1: What are the different ways to select an element in the DOM?
+                    </h4>
+                    <div class="border-b-2 border-dashed"></div>
+                    <p class="p-3">There are various methods to select an element in the DOM, including
+                        getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), and
+                        querySelectorAll(). </p>
+                </div>
+                <div class="bg-white  rounded-lg mb-3">
+                    <h4 class="p-3 font-bold">Question-2: What is the difference between innerHTML, innerText, and
+                        textContent ?</h4>
+                    <div class="border-b-2 border-dashed"></div>
+                    <p class="p-3">innerHTML retrieves or sets HTML content, parsing tags.
+                        innerText gets only visible
+                        text, ignoring hidden elements. textContent retrieves all text,
+                        including hidden elements,
+                        without parsing HTML. textContent is faster than innerText.</p>
+                </div>
+                <div class="bg-white  rounded-lg mb-3">
+                    <h4 class="p-3 font-bold">Question-3: What is event delegation in the DOM?</h4>
+                    <div class="border-b-2 border-dashed"></div>
+                    <p class="p-3">Event delegation is a technique in the DOM where a parent
+                        element handles events for its child elements, even if they are added
+                        dynamically. Instead of adding event listeners to multiple child
+                        elements, we attach a single event listener to their common parent
+                        and use event bubbling to detect the target element.</p>
+                </div>
+                <div class="bg-white  rounded-lg mb-3">
+                    <h4 class="p-3 font-bold">Question-4: What is event bubbling in the DOM?</h4>
+                    <div class="border-b-2 border-dashed"></div>
+                    <p class="p-3">Bubbling in the DOM is an event propagation method.
+                        It starts with an event triggering on the innermost element and
+                        then proceeds to trigger the same event on its parent element and
+                        then its parent's parent element and so on.</p>
+                </div>
+                <div class="bg-white  rounded-lg mb-3">
+                    <h4 class="p-3 font-bold">Question-5: How do you create, add, and remove elements using JavaScript?
+                    </h4>
+                    <div class="border-b-2 border-dashed"></div>
+                    <p class="p-3">Create an element using document.createElement().
+                        Add it using appendChild(), append(), prepend(), or insertBefore().
+                        Remove it with remove() or removeChild(). By using these methods,
+                        we can dynamically manage elements in the DOM efficiently.</p>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <script src="js/blogs.js"></script>
 </body>
 
 </html>
